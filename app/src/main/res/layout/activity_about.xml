@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.about">
+
+    <ImageView
+        android:id="@+id/about_logo"
+        android:layout_width="312dp"
+        android:layout_height="335dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="49dp"
+        android:src="@drawable/noti" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_logo"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/darkbluerectangle"
+        android:clickable="true"
+        android:elevation="15dp"
+        android:focusable="true"
+
+        android:foreground="@drawable/selector"
+        android:padding="8dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/developers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Developers : "
+            android:textColor="@color/md_grey_black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/samba"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_below="@id/developers"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bluerectangle"
+            android:clickable="true"
+            android:elevation="15dp"
+            android:focusable="true"
+
+
+            android:foreground="@drawable/selector"
+            android:padding="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image_profile_samba"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/noti"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+
+            <TextView
+                android:id="@+id/profile_name_samba"
+                android:layout_width="204dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="42dp"
+                android:layout_marginLeft="42dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:layout_toEndOf="@id/image_profile_samba"
+                android:layout_toRightOf="@id/image_profile_samba"
+                android:gravity="center"
+                android:text="Samba "
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+
+                android:layout_width="274dp"
+                android:layout_height="43dp"
+                android:layout_below="@id/profile_name_samba"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/image_profile_samba"
+                android:elevation="15dp"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/morning_view_samba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/image_morning_samba"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/whatsapp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/afternoon_view_samba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/image_afternoon_samba"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/facebook" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/evening_view_samba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/image_evening_samba"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/insta" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/night_view_samba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/image_night_samba"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/github" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ashish"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_below="@id/samba"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bluerectangle"
+            android:clickable="true"
+            android:elevation="15dp"
+            android:focusable="true"
+
+            android:foreground="@drawable/selector"
+            android:padding="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image_profile_ashish"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/noti"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+
+            <TextView
+                android:id="@+id/profile_name_ashish"
+                android:layout_width="204dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="42dp"
+                android:layout_marginLeft="42dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:layout_toEndOf="@id/image_profile_ashish"
+                android:layout_toRightOf="@id/image_profile_ashish"
+                android:gravity="center"
+                android:text="Ashish"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+
+                android:layout_width="274dp"
+                android:layout_height="43dp"
+                android:layout_below="@id/profile_name_ashish"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/image_profile_ashish"
+                android:elevation="15dp"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/morning_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/image_morning_ashish"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/whatsapp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/afternoon_view_ashish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/image_afternoon_ashish"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/facebook" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/evening_view_ashish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/image_evening_ashish"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/insta" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/night_view_ashish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/image_night_ashish"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/github" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

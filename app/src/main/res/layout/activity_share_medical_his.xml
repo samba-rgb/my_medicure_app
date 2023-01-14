@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/iconrectangle"
+    tools:context=".activities.share_medical_his">
+
+
+    <ImageView
+
+        android:layout_width="168dp"
+        android:layout_height="172dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="122dp"
+        android:id="@+id/sharingimageicon"
+        android:src="@drawable/share">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sharingimageicon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="-11dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/bluerectangle"
+        android:elevation="7dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="7dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextFileName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/iconrectangle"
+            android:padding="15dp"
+            android:paddingLeft="10dp"
+            android:elevation="5dp"
+
+
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="56dp"
+
+
+            android:ellipsize="end"
+            android:hint="name of file "
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            app:helperText="file name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editname"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/share_medical_his"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/editTextFileName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="406dp"
+            android:background="@drawable/bluerectangle"
+
+            android:elevation="15dp"
+            android:ellipsize="end"
+            android:text="share Medical History"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.762"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/share_tabllet"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/editTextFileName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="122dp"
+            android:layout_marginEnd="63dp"
+            android:layout_marginBottom="406dp"
+            android:background="@drawable/bluerectangle"
+
+            android:elevation="15dp"
+            android:ellipsize="end"
+            android:text="Share daily medicine data"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.762"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/share_total"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/editTextFileName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="194dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginBottom="406dp"
+            android:background="@drawable/bluerectangle"
+
+            android:elevation="15dp"
+            android:ellipsize="end"
+            android:text="share total needed intake"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.762"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

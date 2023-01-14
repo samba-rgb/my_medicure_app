@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- android:background="#4fC3F7"  for toolbar-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+android:background="@drawable/tool1"
+
+
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+        <RelativeLayout
+            android:id="@+id/tool_relayive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignLeft="@+id/linear2"
+                android:gravity="center"
+                android:text="My Medicure"
+                android:textColor="@color/md_grey_black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+<LinearLayout
+    android:id="@+id/linear2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="40dp"
+    android:layout_alignParentRight="true"
+    >
+            <ImageView
+                android:id="@+id/qricon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/qrcode2" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/firebaseloginicon"
+            android:src="@drawable/firebaseligin"
+
+            />
+</LinearLayout>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <com.fxn.BubbleTabBar
+        android:id="@+id/bubbleTabBar"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+
+        app:bubbletab_menuResource="@menu/list"
+        >
+    </com.fxn.BubbleTabBar>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bubbleTabBar"
+        android:fillViewport="true"/>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+
+        app:headerLayout="@layout/nav_header"
+        android:visibility="invisible"
+
+        app:menu="@menu/navdrawer_menu" />
+
+
+</RelativeLayout>

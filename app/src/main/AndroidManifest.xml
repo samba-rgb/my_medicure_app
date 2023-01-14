@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.samai.mymedcure">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/medcure_icon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/mpill"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.FireBase_edit_ui"
+
+            android:theme="@style/AppNoActionBar"
+            ></activity>
+        <activity android:name=".activities.View_profile"
+            android:theme="@style/AppNoActionBar"
+            ></activity>
+        <activity android:name=".activities.FireBase_registration" />
+        <activity android:name=".activities.afterNotification" />
+        <activity android:name=".activities.mock" />
+        <activity android:name=".activities.registration" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.downloadview" />
+        <activity
+            android:name=".activities.about"
+            android:theme="@style/AppNoActionBar" />
+        <activity android:name=".activities.add_medical_csv" />
+        <activity android:name=".activities.import_medical_his" />
+        <activity android:name=".activities.view_medical_history" />
+        <activity android:name=".activities.view_tab_graph" />
+        <activity android:name=".activities.test_mock1" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".activities.single_hist_tab" />
+        <activity android:name=".activities.share_tablet_his" />
+        <activity android:name=".activities.tab_details_2_java" />
+        <activity android:name=".activities.tab_details_2" />
+        <activity
+            android:name=".activities.spash_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/MYTRAIL">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.web_article" />
+        <activity android:name=".activities.add_medical_his" />
+        <activity android:name=".activities.share_medical_his" />
+        <activity android:name=".activities.import_medical_health" />
+        <activity android:name=".activities.medical_health" />
+        <activity android:name=".activities.Tab_details_1" />
+        <activity android:name=".activities.All_tablets_activity" />
+        <activity android:name=".activities.Medicine_1" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".recievers.NotificationReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name=".recievers.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

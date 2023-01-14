@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Single_tablet_history">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <!-- TODO: Update blank fragment layout -->
+    <com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="373dp"
+        android:background="@drawable/bluerectangle"
+        android:padding="15dp"/>
+    <RelativeLayout
+        android:id="@+id/relative_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendarView">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/medicine_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_alignParentTop="true"
+            android:text="Name"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/medicine_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_alignParentTop="true"
+            android:text="aaaaaa"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:textCursorDrawable="@null"
+            android:layout_toRightOf="@id/medicine_name_text"
+            android:textSize="@dimen/middle_text_size"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/date_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:text="@string/task_date_default"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:textCursorDrawable="@null"
+            android:layout_below="@id/medicine_name_text"
+            android:textSize="@dimen/middle_text_size"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+<LinearLayout
+    android:layout_below="@id/date_now"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/morning_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/morning_view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:text="morning"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_morning"
+            android:src="@drawable/ok"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/morning_view_text"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/afternoon_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/afternoon_view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:text="afternoon"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_afternoon"
+            android:src="@drawable/ok"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/afternoon_view_text"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/evening_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/evening_view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:text="evening"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_evening"
+            android:src="@drawable/ok"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/evening_view_text"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/night_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/night_view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:text="evening"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_night"
+            android:src="@drawable/ok"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/night_view_text"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+</ScrollView>

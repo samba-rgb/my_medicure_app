@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/blogs"
+        android:icon="@drawable/blog"
+        android:title="Article"
+        android:color="@color/colorPrimaryDark"/>
+    <item
+        android:id="@+id/morninglist"
+        android:icon="@drawable/morning"
+        android:title="morning"
+        android:color="@color/colorPrimaryDark"/>
+
+    <item
+        android:id="@+id/afternnonlist"
+        android:icon="@drawable/afternoon"
+        android:title="Afternoon"
+        android:color="@color/colorPrimaryDark"/>
+    <item
+        android:id="@+id/eveninglist"
+        android:icon="@drawable/evng"
+        android:title="Evening"
+
+        android:color="@color/colorPrimaryDark"/>
+    <item
+        android:id="@+id/nightlist"
+        android:icon="@drawable/moon"
+        android:title="night"
+        android:color="@color/colorPrimaryDark"/>
+    <item
+        android:id="@+id/totallist"
+        android:icon="@drawable/all"
+        android:title="total"
+        android:checked="true"
+        android:color="@color/colorPrimaryDark"/>
+
+</menu>

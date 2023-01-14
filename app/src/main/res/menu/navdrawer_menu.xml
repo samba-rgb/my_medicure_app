@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    >
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/about"
+        android:title="about"
+        />
+
+    <item
+        android:id="@+id/addSubject"
+        android:icon="@drawable/ic_plus_vector"
+        android:title="Add Medicine" />
+    <item
+        android:id="@+id/totalsubjectys"
+        android:icon="@drawable/all"
+        android:title="All Medicines" />
+
+    <item
+        android:id="@+id/med_his"
+        android:icon="@drawable/test"
+        android:title="health records" />
+    <item
+        android:id="@+id/importdatabase"
+        android:icon="@drawable/doc2"
+        android:title="Import Doctor observation" />
+
+
+
+    <item
+        android:id="@+id/import_medicine"
+        android:icon="@drawable/imp2"
+        android:title="Import medicine " />
+
+
+    <item
+        android:id="@+id/report"
+        android:icon="@drawable/track"
+        android:title="Tracker" />
+    <item
+        android:id="@+id/exportdatabase"
+        android:icon="@drawable/datashare"
+        android:title="Share Data" />
+    <item
+        android:id="@+id/downsam"
+        android:icon="@drawable/imp2"
+        android:title="doan"/>
+
+    <item
+        android:id="@+id/regis"
+        android:icon="@drawable/login"
+        android:title="profile"/>
+
+
+
+
+</menu>

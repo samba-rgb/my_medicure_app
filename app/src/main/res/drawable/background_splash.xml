@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <item android:drawable="@color/white" />
+    <item
+        android:width="360dp"
+        android:height="360dp"
+        android:gravity="center">
+        <bitmap
+            android:gravity="fill_horizontal|fill_vertical"
+            android:src="@drawable/medcure_icon" />
+    </item>
+</layer-list>

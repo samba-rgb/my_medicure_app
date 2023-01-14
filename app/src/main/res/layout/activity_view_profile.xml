@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.View_profile">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_view_icon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/adduser"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/user_view_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bluerectangle"
+        android:layout_below="@id/user_view_icon"
+        />
+    <TextView
+        android:id="@+id/user_view_gmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bluerectangle"
+
+        android:layout_below="@id/user_view_name"
+        />
+
+    <TextView
+        android:id="@+id/user_view_dob"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+
+        android:padding="10dp"
+        android:background="@drawable/bluerectangle"
+        android:layout_below="@id/user_view_gmail"
+        />
+    <TextView
+        android:id="@+id/user_view_blood"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+
+        android:padding="10dp"
+        android:background="@drawable/bluerectangle"
+        android:layout_below="@id/user_view_dob"
+        />
+</RelativeLayout>

@@ -1,0 +1,2876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1F5FE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/schedule_title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:hint="@string/schedule_title"
+            android:inputType="textCapSentences"
+            android:maxLength="180"
+            android:maxLines="1"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:paddingTop="9dp"
+            android:paddingLeft="9dp"
+            android:paddingBottom="9dp"
+            android:background="@drawable/bluerectangle"
+
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@color/md_grey_500"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/schedule_location2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schedule_title2"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:hint="Link of image"
+            android:inputType="textCapSentences"
+            android:maxLength="180"
+            android:maxLines="1"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@color/md_grey_500"
+
+            android:paddingTop="9dp"
+            android:paddingLeft="9dp"
+            android:paddingBottom="9dp"
+            android:background="@drawable/bluerectangle"            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/schedule_info_med"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schedule_location2"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:autoLink="all"
+            android:hint="@string/schedule_info"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@color/md_grey_500"
+
+            android:paddingTop="9dp"
+            android:paddingLeft="9dp"
+            android:paddingBottom="9dp"
+            android:background="@drawable/bluerectangle"
+            />
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/schedule_info_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/schedule_info_med"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:background="@color/divider_grey"
+            android:importantForAccessibility="no" />
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/monday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluerectangle"
+            android:paddingBottom="5dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:elevation="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/schedule_info_divider">
+
+            <ImageView
+                android:id="@+id/monday_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@string/schedule_time"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_clock_vector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/monday_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_toEndOf="@id/monday_image"
+                android:layout_alignParentTop="true"
+                android:text="Monday"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/mondayswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="Monday"
+
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:id="@+id/monday_morning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/monday_image"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_morning_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="morning"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/monday_morning_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Morning"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_morning_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/monday_morning_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_morning_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/monday_morning_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_morning_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/monday_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/monday_morning"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_afternoon_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Afternoon"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/monday_afternoon_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Afternoon"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_afternoon_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/monday_afternoon_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_afternoon_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/monday_afternoon_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_afternoon_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/monday_evening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/monday_afternoon"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_evening_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Evening"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/monday_evening_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Evening"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/monday_evening_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_evening_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/monday_evening_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_evening_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/monday_night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/monday_evening"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_night_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Night"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/monday_night_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Night"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_night_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/monday_night_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_night_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/monday_night_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_night_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/tuesday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluerectangle"
+            android:paddingBottom="5dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:elevation="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/monday">
+
+            <ImageView
+                android:id="@+id/tuesday_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@string/schedule_time"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_clock_vector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tuesday_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_toEndOf="@id/tuesday_image"
+                android:layout_alignParentTop="true"
+                android:text="Tuesday"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/tuesdayswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="Tuesday"
+
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:id="@+id/tuesday_morning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tuesday_image"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_morning_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="morning"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/tuesday_morning_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Morning"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_morning_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/tuesday_morning_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_morning_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/tuesday_morning_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_morning_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tuesday_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tuesday_morning"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_afternoon_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Afternoon"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/tuesday_afternoon_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Afternoon"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_afternoon_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/tuesday_afternoon_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_afternoon_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/tuesday_afternoon_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_afternoon_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tuesday_evening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tuesday_afternoon"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_evening_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Evening"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/tuesday_evening_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Evening"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_evening_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/tuesday_evening_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_evening_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/tuesday_evening_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_evening_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tuesday_night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tuesday_evening"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_night_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Night"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/tuesday_night_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Night"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_night_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/tuesday_night_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesday_night_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/tuesday_night_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_night_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/wednessday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluerectangle"
+            android:paddingBottom="5dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:elevation="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/tuesday">
+
+            <ImageView
+                android:id="@+id/wednessday_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@string/schedule_time"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_clock_vector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/wednessday_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_toEndOf="@id/wednessday_image"
+                android:layout_alignParentTop="true"
+                android:text="Wednessday"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/wednessdayswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="Wednessday"
+
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:id="@+id/wednessday_morning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wednessday_image"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_morning_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="morning"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/wednessday_morning_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Morning"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_morning_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/wednessday_morning_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_morning_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/wednessday_morning_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_morning_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/wednessday_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wednessday_morning"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_afternoon_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Afternoon"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/wednessday_afternoon_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Afternoon"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_afternoon_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/wednessday_afternoon_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_afternoon_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/wednessday_afternoon_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_afternoon_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/wednessday_evening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wednessday_afternoon"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_evening_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Evening"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/wednessday_evening_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Evening"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_evening_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/wednessday_evening_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_evening_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/wednessday_evening_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_evening_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/wednessday_night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wednessday_evening"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_night_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Night"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/wednessday_night_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Night"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_night_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/wednessday_night_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_night_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/wednessday_night_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_night_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/thursday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluerectangle"
+            android:paddingBottom="5dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:elevation="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/wednessday">
+
+            <ImageView
+                android:id="@+id/thursday_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@string/schedule_time"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_clock_vector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/thursday_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_toEndOf="@id/thursday_image"
+                android:layout_alignParentTop="true"
+                android:text="Thursday"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/thursdayswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="Thursday"
+
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:id="@+id/thursday_morning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thursday_image"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_morning_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="morning"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/thursday_morning_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Morning"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_morning_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/thursday_morning_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_morning_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/thursday_morning_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_morning_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/thursday_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thursday_morning"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_afternoon_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Afternoon"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/thursday_afternoon_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Afternoon"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_afternoon_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/thursday_afternoon_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_afternoon_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/thursday_afternoon_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_afternoon_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/thursday_evening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thursday_afternoon"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_evening_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Evening"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/thursday_evening_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Evening"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_evening_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/thursday_evening_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_evening_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/thursday_evening_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_evening_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/thursday_night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thursday_evening"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_night_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Night"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/thursday_night_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Night"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_night_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/thursday_night_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_night_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/thursday_night_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_night_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/friday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluerectangle"
+            android:paddingBottom="5dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:elevation="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/thursday">
+
+            <ImageView
+                android:id="@+id/friday_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@string/schedule_time"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_clock_vector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/friday_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_toEndOf="@id/friday_image"
+                android:layout_alignParentTop="true"
+                android:text="Friday"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/fridayswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="Friday"
+
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:id="@+id/friday_morning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/friday_image"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_morning_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="morning"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/friday_morning_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Morning"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_morning_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/friday_morning_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_morning_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/friday_morning_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_morning_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/friday_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/friday_morning"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_afternoon_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Afternoon"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/friday_afternoon_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Afternoon"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_afternoon_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/friday_afternoon_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_afternoon_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/friday_afternoon_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_afternoon_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/friday_evening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/friday_afternoon"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_evening_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Evening"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/friday_evening_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Evening"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_evening_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/friday_evening_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_evening_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/friday_evening_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_evening_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/friday_night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/friday_evening"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_night_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Night"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/friday_night_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Night"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_night_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/friday_night_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_night_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/friday_night_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_night_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/saturday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluerectangle"
+            android:paddingBottom="5dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:elevation="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/friday">
+
+            <ImageView
+                android:id="@+id/saturday_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@string/schedule_time"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_clock_vector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/saturday_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_toEndOf="@id/saturday_image"
+                android:layout_alignParentTop="true"
+                android:text="Saturday"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/saturdayswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="Saturday"
+
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:id="@+id/saturday_morning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saturday_image"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_morning_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="morning"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/saturday_morning_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Morning"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_morning_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/saturday_morning_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_morning_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/saturday_morning_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_morning_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/saturday_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saturday_morning"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_afternoon_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Afternoon"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/saturday_afternoon_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Afternoon"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_afternoon_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/saturday_afternoon_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_afternoon_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/saturday_afternoon_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_afternoon_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/saturday_evening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saturday_afternoon"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_evening_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Evening"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/saturday_evening_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Evening"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_evening_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/saturday_evening_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_evening_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/saturday_evening_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_evening_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/saturday_night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saturday_evening"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_night_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Night"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/saturday_night_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Night"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_night_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/saturday_night_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_night_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/saturday_night_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_night_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/sunday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluerectangle"
+            android:paddingBottom="5dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:elevation="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/saturday">
+
+            <ImageView
+                android:id="@+id/sunday_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@string/schedule_time"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_clock_vector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sunday_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_toEndOf="@id/sunday_image"
+                android:layout_alignParentTop="true"
+                android:text="Sunday"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/sundayswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="Sunday"
+
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:id="@+id/sunday_morning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sunday_image"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_morning_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="morning"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sunday_morning_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Morning"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_morning_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/sunday_morning_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_morning_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/sunday_morning_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_morning_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/sunday_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sunday_morning"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_afternoon_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Afternoon"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sunday_afternoon_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Afternoon"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_afternoon_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/sunday_afternoon_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_afternoon_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/sunday_afternoon_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_afternoon_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/sunday_evening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sunday_afternoon"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_evening_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Evening"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sunday_evening_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Evening"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_evening_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/sunday_evening_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_evening_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/sunday_evening_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_evening_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/sunday_night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sunday_evening"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_night_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Night"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/sunday_night_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Night"
+
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_night_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/sunday_night_time_text"
+                    android:paddingLeft="15dp"
+                    android:text="@string/schedule_start_at"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/background_dark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_night_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_below="@id/sunday_night_switch"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/schedule_night_start_time"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/background_dark" />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bluerectangle"
+    android:paddingBottom="5dp"
+    android:padding="5dp"
+    android:paddingLeft="5dp"
+    android:elevation="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="7dp"
+    android:layout_below="@id/sunday">
+        <RelativeLayout
+            android:id="@+id/expiry_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:background="@drawable/darkbluerectangle"
+            >
+
+            <ImageView
+                android:id="@+id/task_time_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@string/task_deadline"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_clock_vector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/task_deadline_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_toEndOf="@id/task_time_image"
+                android:layout_alignParentTop="true"
+                android:text="Expiry Date"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/task_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_below="@id/task_deadline_text"
+                android:layout_toEndOf="@id/task_time_image"
+                android:text="@string/task_date_default"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/task_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_below="@id/task_deadline_text"
+                android:layout_alignParentEnd="true"
+                android:text="@string/task_time_default"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/percentmock"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/darkbluerectangle"
+            android:paddingBottom="10dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+
+            android:elevation="10dp"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_below="@id/expiry_time_layout">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textattend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="number of tablets"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            <com.warkiz.widget.IndicatorSeekBar
+                android:layout_width="match_parent"
+                android:id="@+id/slider"
+                android:layout_below="@+id/textattend"
+                android:layout_height="wrap_content"
+                app:isb_max="100"
+                app:isb_min="0"
+                app:isb_progress="80"
+                app:isb_seek_smoothly="true"
+                app:isb_show_tick_marks_type="oval"
+                app:isb_tick_marks_size="13dp"
+
+                app:isb_show_tick_texts="true"
+                app:isb_tick_texts_size="15sp"
+                app:isb_tick_texts_color="@color/colorPrimary"
+                app:isb_thumb_color="@color/colorPrimary"
+                app:isb_thumb_size="20dp"
+                app:isb_show_indicator="rounded_rectangle"
+                app:isb_indicator_color="@color/md_light_blue_200"
+                app:isb_indicator_text_color="@color/colorAccent"
+                app:isb_indicator_text_size="18sp"
+                app:isb_track_background_color="@color/md_light_blue_100"
+                app:isb_track_background_size="2dp"
+                app:isb_track_progress_color="@color/md_grey_black"
+                app:isb_track_progress_size="4dp"
+                app:isb_only_thumb_draggable="true"
+                />
+        </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

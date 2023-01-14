@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1F5FE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/schedule_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:hint="@string/schedule_title"
+            android:inputType="textCapSentences"
+            android:maxLength="180"
+            android:maxLines="1"
+            android:textCursorDrawable="@null"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="@dimen/middle_text_size"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/darkbluerectangle"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/informationprogress"
+
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageview"
+            android:layout_alignTop="@+id/imageview"
+
+            android:layout_alignEnd="@+id/imageview"
+            android:layout_alignBottom="@+id/imageview"
+            android:layout_gravity="center"
+            android:layout_marginStart="66dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginBottom="64dp"
+            app:SpinKit_Color="@color/md_light_blue_200" />
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/schedule_title2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="101dp"
+
+
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:padding="8dp"
+            android:background="@drawable/bluerectangle"
+            android:importantForAccessibility="auto"
+            android:elevation="5dp"/>
+
+        <TextView
+            android:id="@+id/remdays"
+            android:layout_width="75dp"
+            android:layout_height="150dp"
+            android:layout_above="@+id/monday"
+            android:layout_alignBaseline="@id/imageview"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="313dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bluerectangle"
+            android:text="8 \nweeks \n 4 \ndays"
+            android:gravity="center"
+            android:textSize="@dimen/big_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/md_grey_black"
+            android:elevation="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/histside"
+            android:layout_width="75dp"
+            android:layout_height="150dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_above="@+id/monday"
+            android:layout_alignBaseline="@id/imageview"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/bluerectangle"
+            android:gravity="center"
+            android:src="@drawable/history"
+            android:elevation="5dp"/>
+
+        <RelativeLayout
+            android:id="@+id/monday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluerectangle"
+            android:paddingBottom="5dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:elevation="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/imageview">
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/monday_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:text="day"
+                android:textColor="@android:color/black"
+                android:paddingLeft="40dp"
+                android:paddingBottom="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/morning_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:text="N"
+                android:textColor="@android:color/black"
+                android:paddingLeft="15dp"
+                android:paddingRight="25sp"
+                android:paddingBottom="10dp"
+                android:layout_alignParentRight="true"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/morning_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:text="E"
+                android:textColor="@android:color/black"
+                android:paddingLeft="15dp"
+                android:paddingBottom="10dp"
+                android:layout_toLeftOf="@id/morning_1"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/morning_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:text="A"
+                android:textColor="@android:color/black"
+                android:paddingLeft="15dp"
+                android:paddingBottom="10dp"
+                android:layout_toLeftOf="@id/morning_2"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/morning_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:text="M"
+                android:textColor="@android:color/black"
+                android:paddingLeft="15dp"
+                android:paddingBottom="10dp"
+                android:layout_toLeftOf="@id/morning_3"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold" />
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/monday_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/monday_time_text"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_tab_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Monday"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/monday_nig_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="22dp"
+                    android:visibility="invisible"
+
+                    />
+                <ImageView
+                    android:id="@+id/monday_even_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/monday_nig_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/monday_after_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/monday_even_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/monday_morning_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/monday_after_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+
+                    />
+
+
+
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tuesday_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/monday_tab"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tuesaday_tab_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Tuesday"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/tuesday_nig_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="22dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/tuesday_even_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/tuesday_nig_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/tuesday_after_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/tuesday_even_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/tuesday_morning_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/tuesday_after_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/wednessday_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tuesday_tab"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wednessday_tab_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Wednessday"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/wednessday_nig_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="22dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/wednessday_even_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/wednessday_nig_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/wednessday_after_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/wednessday_even_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/wednessday_morning_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/wednessday_after_icon"
+                    android:layout_marginRight="10dp"
+
+                    android:visibility="invisible"
+
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/thursday_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wednessday_tab"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/thursday_tab_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Thursday"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+                <ImageView
+                    android:id="@+id/thursday_nig_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="22dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/thursday_even_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/thursday_nig_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/thursday_after_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/thursday_even_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/thursday_morning_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/thursday_after_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+
+
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/friday_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thursday_tab"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/friday_tab_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Friday"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/friday_nig_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="22dp"
+                    android:visibility="invisible"
+
+
+                    />
+                <ImageView
+                    android:id="@+id/friday_even_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/friday_nig_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+                    />
+                <ImageView
+                    android:id="@+id/friday_after_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/friday_even_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+                    />
+                <ImageView
+                    android:id="@+id/friday_morning_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/friday_after_icon"
+                    android:layout_marginRight="10dp"
+
+                    android:visibility="invisible"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/saturday_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/friday_tab"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/saturday_tab_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Saturday"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/saturday_nig_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="22dp"
+                    android:visibility="invisible"
+
+                    />
+                <ImageView
+                    android:id="@+id/saturday_even_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/saturday_nig_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+                    />
+                <ImageView
+                    android:id="@+id/saturday_after_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/saturday_even_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+                    />
+                <ImageView
+                    android:id="@+id/saturday_morning_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/saturday_after_icon"
+                    android:layout_marginRight="10dp"
+
+                    android:visibility="invisible"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/sunday_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saturday_tab"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sunday_tab_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Sunday"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/sunday_nig_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="22dp"
+                    android:visibility="invisible"
+
+                    />
+                <ImageView
+                    android:id="@+id/sunday_even_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/sunday_nig_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+                    />
+                <ImageView
+                    android:id="@+id/sunday_after_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/sunday_even_icon"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+
+                    />
+                <ImageView
+                    android:id="@+id/sunday_morning_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/medicines"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@id/sunday_after_icon"
+                    android:layout_marginRight="10dp"
+
+                    android:visibility="invisible"
+
+                    />
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+<TextView
+    android:id="@+id/history"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/monday"
+    android:background="@drawable/bluerectangle"
+    android:paddingBottom="5dp"
+    android:padding="10dp"
+    android:paddingLeft="5dp"
+    android:elevation="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="7dp"
+    android:text="History"
+    android:textColor="#000000"
+    android:textStyle="bold"
+    android:textSize="17sp"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+
+    />
+    </RelativeLayout>
+
+</ScrollView>

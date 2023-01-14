@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/schedule_list_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#65FFF59D"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="15dp"
+    android:layout_margin="10dp"
+
+    android:foreground="@drawable/selector">
+
+    <RelativeLayout
+        android:id="@+id/schedule_list_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:paddingTop="@dimen/medium_margin"
+        android:paddingBottom="@dimen/medium_margin">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/expiry_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:ellipsize="end"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingStart="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/tiny_margin"
+            android:textColor="#EF5350"
+            android:textCursorDrawable="@null"
+            android:textSize="25sp"
+            tools:text="Calculus"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/schedule_list_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expiry_list_title"
+            android:layout_toStartOf="@+id/schedule_list_time"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:gravity="center"
+            android:paddingStart="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/tiny_margin"
+            android:textCursorDrawable="@null"
+            android:fontFamily="@font/kgprimary"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            tools:text="S101"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schedule_list_location"
+            android:background="@drawable/gold_rectangle"
+            android:padding="10dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/schedule_list_expiry_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/schedule_list_time"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingStart="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/tiny_margin"
+            android:textCursorDrawable="@null"
+            android:fontFamily="@font/kgprimary"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            tools:text="Expiry Date"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/schedule_list_expiry_time"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/kgprimary"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/schedule_list_expiry_text"
+            android:maxLines="1"
+            android:paddingStart="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/tiny_margin"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Count" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/schedule_list_count_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/schedule_list_expiry_text"
+            android:layout_toStartOf="@+id/schedule_list_time"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:gravity="center"
+            android:paddingStart="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/tiny_margin"
+            android:textCursorDrawable="@null"
+            android:fontFamily="@font/kgprimary"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            tools:text="S101"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/schedule_list_count_val"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/schedule_list_expiry_time"
+            android:ellipsize="end"
+            android:fontFamily="@font/kgprimary"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:layout_toRightOf="@id/schedule_list_expiry_text"
+            android:maxLines="1"
+            android:paddingStart="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/tiny_margin"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:text="S101" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

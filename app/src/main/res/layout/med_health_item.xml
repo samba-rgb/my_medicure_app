@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/schedule_list_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#65FFF59D"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="15dp"
+    android:layout_margin="10dp"
+
+    android:foreground="@drawable/selector">
+
+    <RelativeLayout
+        android:id="@+id/schedule_list_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:paddingTop="@dimen/medium_margin"
+        android:paddingBottom="@dimen/medium_margin">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/medical_visit_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingStart="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/tiny_margin"
+            android:textColor="#EF5350"
+            android:textCursorDrawable="@null"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:text="Calculus" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/doctor_name_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/medical_visit_number"
+            android:layout_toStartOf="@+id/schedule_list_time"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:gravity="center"
+            android:paddingStart="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/tiny_margin"
+            android:textCursorDrawable="@null"
+            android:fontFamily="@font/kgprimary"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            tools:text="S101"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doctor_name_1"
+            android:background="@drawable/gold_rectangle"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/visited_date_text"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/schedule_list_time"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:paddingStart="@dimen/tiny_margin"
+                android:paddingEnd="@dimen/tiny_margin"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="20sp"
+                tools:text="Visited Date" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/visited_date_1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/visited_date_text"
+                android:autoSizeTextType="uniform"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:paddingStart="@dimen/tiny_margin"
+                android:paddingEnd="@dimen/tiny_margin"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                tools:text="@string/task_date_default" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

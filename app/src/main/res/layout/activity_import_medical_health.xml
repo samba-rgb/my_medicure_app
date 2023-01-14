@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.import_medical_health">
+
+
+    <ImageView
+        android:id="@+id/shareimage"
+        android:layout_width="168dp"
+        android:layout_height="172dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="122dp"
+        android:src="@drawable/imp">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/schedule_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shareimage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="-15dp"
+        android:background="@drawable/bluerectangle"
+        android:elevation="7dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="7dp">
+
+
+        <TextView
+            android:id="@+id/importinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/iconrectangle"
+            android:elevation="15dp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/importinfo"
+            android:textColor="@color/md_grey_black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_loadCsv"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="179dp"
+
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="122dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginBottom="113dp"
+            android:background="@drawable/bluerectangle"
+            android:elevation="15dp"
+
+            android:ellipsize="end"
+            android:text="Load CSV File"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.762"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

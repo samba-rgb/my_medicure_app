@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/visited_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:hint="@string/schedule_title"
+            android:inputType="textCapSentences"
+            android:maxLength="180"
+            android:maxLines="1"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@color/md_grey_500"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/doctor_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/visited_number"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:hint="@string/schedule_location"
+            android:inputType="textCapSentences"
+            android:maxLength="180"
+            android:maxLines="1"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@color/md_grey_500"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/doctor_observation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doctor_name"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:autoLink="all"
+            android:hint="@string/schedule_info"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/middle_text_size"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@color/md_grey_500"
+            android:backgroundTint="@color/colorPrimary"
+
+            />
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/schedule_info_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/doctor_observation"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:background="@color/divider_grey"
+            android:importantForAccessibility="no" />
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/monday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluerectangle"
+            android:paddingBottom="5dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:elevation="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/schedule_info_divider">
+
+            <ImageView
+                android:id="@+id/monday_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@string/schedule_time"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/info" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/monday_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_toEndOf="@id/monday_image"
+                android:layout_alignParentTop="true"
+                android:text="Virtual or not"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/middle_text_size"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/virtualswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="Virtual"
+
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:id="@+id/virual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/monday_image"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monday_morning_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Visited date"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/visited_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:text="@string/task_date_default"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/bp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/virual"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/bp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Bp value"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bp_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:text="120/80"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/cell_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bp"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/cell_count_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Cell count"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/cell_count_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:text="200"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/hemoglobin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cell_count"
+                android:background="@drawable/darkbluerectangle"
+                android:paddingBottom="5dp"
+
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/hemoglobin_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_alignParentTop="true"
+                    android:text="Hemoglobin"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/hemoglobin_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:text="50"
+                    android:textCursorDrawable="@drawable/cursorcolor"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+
+                    />
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

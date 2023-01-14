@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.downloadview">
+
+
+    <ImageView
+        android:id="@+id/fire_down"
+        android:layout_width="331dp"
+        android:layout_height="317dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="49dp"
+        android:src="@drawable/server_download" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/loginbtn2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/fire_down"
+        android:paddingLeft="2dp"
+        android:paddingTop="10dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="10dp"
+        android:visibility="invisible"
+android:layout_marginTop="150dp"
+        app:fb_borderColor="@color/md_grey_black"
+        app:fb_borderWidth="1dp"
+android:layout_centerHorizontal="true"
+        app:fb_defaultColor="#b3e5fc"
+        app:fb_focusColor="#9bd823"
+        app:fb_iconPosition="left"
+        app:fb_radius="50dp"
+        app:fb_text="Login"
+
+        app:fb_textColor="@color/md_grey_black" />
+
+    <RelativeLayout
+        android:id="@+id/relative_error"
+        android:layout_width="450dp"
+        android:layout_height="350dp"
+        android:layout_below="@+id/fire_down"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginRight="5dp"
+        android:visibility="visible"
+        android:background="@drawable/curvyedge"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/danger2"
+            android:layout_width="231dp"
+            android:layout_height="220dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/danger" />
+
+        <LinearLayout
+
+            android:layout_width="450dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/danger2"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:elevation="15dp"
+
+            android:layout_toEndOf="@+id/image_profile"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/morning_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+
+                <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:id="@+id/text_download_error"
+                android:layout_centerHorizontal="true"
+                android:text="@string/biometry_error"
+                android:textSize="15dp"
+                    android:textColor="@color/md_grey_black"
+                    android:gravity="center"
+                    android:maxLines="2"
+
+                />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/retry_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/image_retry"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/retry" />
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_down"
+        android:layout_width="450dp"
+        android:layout_height="350dp"
+        android:layout_below="@+id/fire_down"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:background="@drawable/curvyedge"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/updateavailable"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Update Available"
+            android:textStyle="bold"
+            android:textColor="@color/md_grey_black"
+            android:gravity="center"
+            android:textSize="22sp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+ />
+        <TextView
+            android:id="@+id/link"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/updateavailable"
+            android:text="Version : 1"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/md_grey_black"
+            android:layout_marginEnd="116dp" />
+        <TextView
+            android:id="@+id/date_updated"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/link"
+            android:text="Date: 24/05/2001"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/md_grey_black"
+            android:layout_marginEnd="116dp" />
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:clipChildren="false"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/link"
+            app:layout_constraintVertical_bias="0.84">>
+
+            <com.ncorti.slidetoact.SlideToActView
+                android:id="@+id/download_link"
+                android:layout_width="300dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
+                android:elevation="5dp"
+                app:area_margin="8dp"
+                app:inner_color="#FFFFFF"
+                app:complete_icon="@drawable/custom_complete_anim"
+
+                app:outer_color="@color/md_light_blue_700"
+                app:text="swipe right" />
+        </FrameLayout>
+
+
+
+
+    </RelativeLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/animation_view"
+        app:lottie_rawRes="@raw/success1"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        app:lottie_speed="0.1"
+app:lottie_repeatCount="0"
+        android:visibility="invisible"
+
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"/>
+
+    <FrameLayout
+        android:id="@+id/loadingFrame_download"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/coustum_border"
+        android:layout_centerInParent="true"
+        android:elevation="5dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar_download"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="60dp"
+            android:indeterminateTint="@color/blue"
+            android:layout_height="60dp"
+            android:outlineSpotShadowColor="@color/white"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</RelativeLayout>
